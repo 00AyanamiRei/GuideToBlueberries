@@ -4,6 +4,9 @@ import com.zaxxer.hikari.HikariConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * Connection pool HikariCP
+ */
 public class HikariCPConfig {
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/blueberry_data_hub";
     private static final String JDBC_USERNAME = "root";
@@ -17,6 +20,10 @@ public class HikariCPConfig {
 
     private static final Logger LOGGER = LogManager.getLogger(HikariCPConfig.class);
 
+    /**
+     * HikariCP configuration create
+     * @return config
+     */
     public static HikariConfig getConfig() {
         HikariConfig config = new HikariConfig();
         config.setJdbcUrl(JDBC_URL);

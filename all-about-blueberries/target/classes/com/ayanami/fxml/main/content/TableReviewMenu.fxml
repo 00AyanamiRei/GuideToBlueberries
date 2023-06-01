@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ayanami.presentationlayer.TableReviewMenuController">
+    <TextField fx:id="searchTextField" promptText="Search..." />
+    <TableView fx:id="tableView" stylesheets="@../../../css/tableviewstyle.css">
+        <columns>
+            <TableColumn text="ID" fx:id="idColumn" />
+            <TableColumn text="Blueberry ID" fx:id="blueberryIDColumn" />
+            <TableColumn text="User ID" fx:id="userIDColumn" />
+            <TableColumn text="Review" fx:id="reviewColumn" />
+            <TableColumn text="Rating" fx:id="ratingColumn" />
+        </columns>
+    </TableView>
+</VBox>

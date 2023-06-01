@@ -4,6 +4,9 @@ import com.ayanami.businesslogiclayer.model.RipeningPeriod;
 
 import java.util.List;
 
+/**
+ * RipeningPeriod DAO interface
+ */
 public interface RipeningPeriodDAO {
     void save(RipeningPeriod ripeningPeriod);
     void update(RipeningPeriod ripeningPeriod);

@@ -7,6 +7,9 @@ import jakarta.validation.constraints.Positive;
 import java.util.Date;
 import java.util.StringJoiner;
 
+/**
+ * RipeningPeriod entity
+ */
 public class RipeningPeriod implements RipeningPeriodI {
     @NotNull
     @Positive

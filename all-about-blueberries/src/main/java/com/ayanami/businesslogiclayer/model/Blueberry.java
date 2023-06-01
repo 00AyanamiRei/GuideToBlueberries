@@ -4,9 +4,13 @@ import com.ayanami.businesslogiclayer.model.interfaces.BlueberryI;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import javafx.beans.property.*;
 
 import java.util.StringJoiner;
 
+/**
+ * Blueberry entity
+ */
 public class Blueberry implements BlueberryI {
     @NotNull
     private Integer id;

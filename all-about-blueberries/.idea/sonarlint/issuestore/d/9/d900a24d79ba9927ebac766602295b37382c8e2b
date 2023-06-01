@@ -1,0 +1,32 @@
+
+E
+java:S1604y"(Make this anonymous inner class a lambda(²¯İ—8å¥Î£‡1
+K
+java:S1604‘"(Make this anonymous inner class a lambda(ÙÉãÿÿÿÿÿ8æ¥Î£‡1
+F
+java:S1604£"(Make this anonymous inner class a lambda(Õ¯«Õ8æ¥Î£‡1
+h
+java:S2184‡"ECast one of the operands of this subtraction operation to a "double".(Ï†’ôşÿÿÿÿ8è¥Î£‡1
+e
+java:S2184¿"BCast one of the operands of this addition operation to a "double".(ıË‘õúÿÿÿÿ8ê¥Î£‡1
+{
+java:S1450+"^Remove the "creditsSubscene" field and declare it as a local variable in the relevant methods.(ûÃ“õ8‘¦Î£‡1
+}
+java:S1450,"[Remove the "helpSubscene" field and declare it as a local variable in the relevant methods.(ïÃÔ¿ûÿÿÿÿ8‘¦Î£‡1
+~
+java:S1450-"\Remove the "scoreSubscene" field and declare it as a local variable in the relevant methods.(çúúÿÿÿÿ8‘¦Î£‡1
+g
+java:S1124'"EReorder the modifiers to comply with the Java Language Specification.(ë©Àışÿÿÿÿ8“¦Î£‡1
+g
+java:S1124("EReorder the modifiers to comply with the Java Language Specification.(®Õœ“øÿÿÿÿ8“¦Î£‡1
+j	java:S100½"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëêä8±¦Î£‡1
+L
+java:S1128"/Remove this unused import 'javafx.event.Event'.(ô”áñ8¹ÎÓ£‡1
+Z
+java:S1128"8Remove this unused import 'javafx.scene.control.Button'.(Ë Í‹øÿÿÿÿ8¹ÎÓ£‡1
+X
+java:S1128";Remove this unused import 'javafx.scene.effect.DropShadow'.(Ş×òó8¹ÎÓ£‡1
+[
+java:S1128"9Remove this unused import 'javafx.scene.image.ImageView'.(áÿ®Ãüÿÿÿÿ8¹ÎÓ£‡1
+P
+java:S1144½"3Remove this unused private "AddMenuButtons" method.(ëêä8´¦Î£‡1

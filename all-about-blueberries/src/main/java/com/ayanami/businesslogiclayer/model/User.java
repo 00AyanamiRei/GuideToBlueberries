@@ -5,11 +5,10 @@ import jakarta.validation.constraints.*;
 
 import java.util.StringJoiner;
 
+/**
+* User entity
+ */
 public class User implements UserI {
-    @NotNull
-    @Positive
-    private Integer id;
-
     @NotEmpty
     @Size(max = 100)
     private String userName;
@@ -22,21 +21,18 @@ public class User implements UserI {
     @Email
     private String mail;
 
+    @NotEmpty
+    private  String status;
 
-    public User(int id, String userName, String password, String mail) {
-        this.id = id;
+    public User(String userName, String password, String mail, String status) {
         this.userName = userName;
         this.password = password;
         this.mail = mail;
+        this.status = status;
     }
 
-    public static UserBuilderId builder() {
-        return id -> userName -> password -> mail -> () -> new User(id, userName, password, mail);
-    }
-
-    @Override
-    public int getId() {
-        return id;
+    public static UserBuilderUserName builder() {
+        return userName -> password -> mail -> status -> () -> new User(userName, password, mail, status);
     }
 
     @Override
@@ -54,9 +50,8 @@ public class User implements UserI {
         return mail;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    @Override
+    public String getStatus() {return status;}
 
     public void setUserName(String userName) {
         this.userName = userName;
@@ -70,9 +65,7 @@ public class User implements UserI {
         this.mail = mail;
     }
 
-    public interface UserBuilderId {
-        UserBuilderUserName id(int id);
-    }
+    public void setStatus(String status) {this.status = status;}
 
     public interface UserBuilderUserName {
         UserBuilderPassword userName(String userName);
@@ -83,7 +76,11 @@ public class User implements UserI {
     }
 
     public interface UserBuilderMail {
-        UserBuilder mail(String mail);
+        UserBuilderStatus mail(String mail);
+    }
+
+    public interface UserBuilderStatus {
+        UserBuilder status(String status);
     }
 
     public interface UserBuilder{
@@ -93,10 +90,10 @@ public class User implements UserI {
     @Override
     public String toString() {
         return new StringJoiner(", ", "", "")
-                .add("" + id)
                 .add(userName)
                 .add(password)
                 .add(mail)
+                .add(status)
                 .toString();
     }
 }

@@ -1,0 +1,19 @@
+
+g
+java:S1192"LDefine a constant instead of duplicating this literal ".properties" 3 times.(ü÷ÂŠùÿÿÿÿ
+†
+java:S1192"kDefine a constant instead of duplicating this literal "src/main/resources/com/ayanami/userconfig/" 3 times.(ü÷ÂŠùÿÿÿÿ
+d
+java:S1192"IDefine a constant instead of duplicating this literal "username" 3 times.(£¼Õıÿÿÿÿ
+b
+java:S2095 "MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(õâƒ|
+d
+java:S20958"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(®ÛÆ«
+v
+java:S3008"[Rename this field "CONFIG_FILE_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»´›‹ÿÿÿÿÿ
+K
+java:S3416"0Update this logger to use "ConfigManager.class".(Ê•¯«ıÿÿÿÿ
+z
+java:S1450"_Remove the "CONFIG_FILE_PATH" field and declare it as a local variable in the relevant methods.(»´›‹ÿÿÿÿÿ
+L
+java:S2696?"6Make the enclosing method "static" or remove this set.(äã

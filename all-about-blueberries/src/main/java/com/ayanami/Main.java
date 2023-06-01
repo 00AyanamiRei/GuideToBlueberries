@@ -1,28 +1,51 @@
 package com.ayanami;
 
-import com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.psl.PublicSuffixMatcherLoader;
+
+import com.ayanami.businesslogiclayer.game.view.ViewManager;
+import com.ayanami.businesslogiclayer.model.User;
+import com.ayanami.dataaccesslayer.dao.UserDAO;
+import com.ayanami.dataaccesslayer.dao.impl.UserDAOImpl;
+import com.ayanami.presentationlayer.MessageBoxUtils;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
+import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
-import java.io.IOException;
-import java.util.Objects;
+import java.util.List;
 
+/**
+ * main class for starting the application
+ */
 public class Main extends Application {
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+       private double xOffset = 0.0;
+       private double yOffset = 0.0;
 
-    @Override
-    public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("presentationlayer/Registration.fxml")));
-        primaryStage.setTitle("Hello JavaFX");
-        primaryStage.setScene(new Scene(root, 300, 200));
-        primaryStage.show();
-    }
+       public Main() {
+       }
+
+       public void start(Stage primaryStage) throws Exception {
+           Parent root = (Parent)FXMLLoader.load(this.getClass().getResource("fxml/login/Main.fxml"));
+           primaryStage.initStyle(StageStyle.TRANSPARENT);
+           root.setOnMousePressed((event) -> {
+               this.xOffset = event.getSceneX();
+               this.yOffset = event.getSceneY();
+           });
+           root.setOnMouseDragged((event) -> {
+               primaryStage.setX(event.getScreenX() - this.xOffset);
+               primaryStage.setY(event.getScreenY() - this.yOffset);
+           });
+           Scene scene = new Scene(root);
+           scene.setFill(Color.TRANSPARENT);
+           primaryStage.setScene(scene);
+           primaryStage.show();
+       }
+
+       public static void main(String[] args) {
+           launch(args);
+       }
 }

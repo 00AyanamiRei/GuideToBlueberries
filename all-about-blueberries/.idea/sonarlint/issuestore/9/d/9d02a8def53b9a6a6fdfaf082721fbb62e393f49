@@ -1,7 +1,21 @@
 
-—
-java:S1128"zRemove this unused import 'com.github.dockerjava.zerodep.shaded.org.apache.hc.client5.http.psl.PublicSuffixMatcherLoader'.(Éİ¢Â8˜µÀ‚1
-Y
-java:S1128"7Remove this unused import 'javafx.scene.control.Label'.(ö²­ÿÿÿÿÿ8˜µÀ‚1
-W
-java:S1128	":Remove this unused import 'javafx.scene.layout.StackPane'.(™÷èò8˜µÀ‚1
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ú„üÿÿÿÿ8äõ¸¢‡1
+O
+java:S1611""3Remove the parentheses around the "event" parameter(¦òºb8çõ¸¢‡1
+P
+java:S1611&"3Remove the parentheses around the "event" parameter(Õî¬8çõ¸¢‡1
+s
+java:S1128"QRemove this unused import 'com.ayanami.businesslogiclayer.game.view.ViewManager'.(ëòúµüÿÿÿÿ8íõ¸¢‡1
+c
+java:S1128"FRemove this unused import 'com.ayanami.businesslogiclayer.model.User'.(«éà’8íõ¸¢‡1
+f
+java:S1128"DRemove this unused import 'com.ayanami.dataaccesslayer.dao.UserDAO'.(ÿ’‡æÿÿÿÿÿ8íõ¸¢‡1
+j
+java:S1128"MRemove this unused import 'com.ayanami.dataaccesslayer.dao.impl.UserDAOImpl'.(»àû“8íõ¸¢‡1
+l
+java:S1128"JRemove this unused import 'com.ayanami.presentationlayer.MessageBoxUtils'.(Ëª¿Óÿÿÿÿÿ8íõ¸¢‡1
+R
+java:S1128"5Remove this unused import 'javafx.scene.image.Image'.(‰¿½Ç8íõ¸¢‡1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8íõ¸¢‡1

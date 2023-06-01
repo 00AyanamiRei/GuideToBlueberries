@@ -7,6 +7,7 @@ import jakarta.validation.Valid;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,6 +16,20 @@ import java.util.List;
 public class RipeningPeriodDAOImpl implements RipeningPeriodDAO {
     private static final Logger LOGGER = LogManager.getLogger(RipeningPeriodDAOImpl.class);
 
+    private final DataSource dataSource;
+
+    public RipeningPeriodDAOImpl() {
+        this.dataSource = ConnectionPool.getDataSource();
+    }
+
+    public RipeningPeriodDAOImpl(DataSource dataSource) {
+        this.dataSource = ConnectionPool.getDataSource();
+    }
+
+    /**
+     * save a new RipeningPeriod
+     * @param ripeningPeriod
+     */
     @Override
     public void save(@Valid RipeningPeriod ripeningPeriod) {
         String sql = "INSERT INTO ripening_periods (id, deadline) VALUES (?, ?)";
@@ -29,6 +44,10 @@ public class RipeningPeriodDAOImpl implements RipeningPeriodDAO {
         }
     }
 
+    /**
+     * update a RipeningPeriod
+     * @param ripeningPeriod
+     */
     @Override
     public void update(@Valid RipeningPeriod ripeningPeriod) {
         String sql = "UPDATE ripening_periods SET deadline = ? WHERE id = ?";
@@ -43,6 +62,10 @@ public class RipeningPeriodDAOImpl implements RipeningPeriodDAO {
         }
     }
 
+    /**
+     * delete a RipeningPeriod
+     * @param ripeningPeriod
+     */
     @Override
     public void delete(@Valid RipeningPeriod ripeningPeriod) {
         String sql = "DELETE FROM ripening_periods WHERE id = ?";
@@ -56,6 +79,11 @@ public class RipeningPeriodDAOImpl implements RipeningPeriodDAO {
         }
     }
 
+    /**
+     * find a RipeningPeriod by ID
+     * @param id
+     * @return
+     */
     @Override
     public RipeningPeriod findById(int id) {
         String sql = "SELECT * FROM ripening_periods WHERE id = ?";
@@ -73,6 +101,10 @@ public class RipeningPeriodDAOImpl implements RipeningPeriodDAO {
         return null;
     }
 
+    /**
+     * find all RipeningPeriods
+     * @return
+     */
     @Override
     public List<RipeningPeriod> findAll() {
         String sql = "SELECT * FROM ripening_periods";
@@ -91,6 +123,12 @@ public class RipeningPeriodDAOImpl implements RipeningPeriodDAO {
         return Collections.emptyList();
     }
 
+    /**
+     * map ResultSet to RipeningPeriod
+     * @param resultSet
+     * @return
+     * @throws SQLException
+     */
     private RipeningPeriod mapResultSetToRipeningPeriod(ResultSet resultSet) throws SQLException {
         int id = resultSet.getInt("id");
         Date deadline = resultSet.getDate("deadline");

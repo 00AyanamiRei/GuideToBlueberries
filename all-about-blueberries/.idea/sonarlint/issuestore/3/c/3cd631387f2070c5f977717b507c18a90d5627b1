@@ -1,0 +1,24 @@
+
+J
+java:S1604/"(Make this anonymous inner class a lambda(áÎ¾¹ùÿÿÿÿ8®«É¡‡1
+D
+java:S1604:"(Make this anonymous inner class a lambda(‹¡—v8°«É¡‡1
+E
+java:S1604E"(Make this anonymous inner class a lambda(ˆÕäÂ8°«É¡‡1
+E
+java:S1604N"(Make this anonymous inner class a lambda(°ÎÍ8°«É¡‡1
+]	java:S110	"<This class has 8 parents which is greater than 5 authorized.(¿‡ş¦ıÿÿÿÿ8°«É¡‡1
+p	java:S116"TRename this field "FONT_PATH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™…•†8»«É¡‡1
+{	java:S116"_Rename this field "BUTTON_PRESSED_STYLE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÖ®8»«É¡‡1
+x	java:S116"\Rename this field "BUTTON_FREE_STYLE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âÀËµ8ÑÏ¡‡1
+>
+java:S1170"!Make this final field static too.(™…•†8À«É¡‡1
+>
+java:S1170"!Make this final field static too.(ØÖ®8À«É¡‡1
+>
+java:S1170"!Make this final field static too.(âÀËµ8ÕÏ¡‡1
+^
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(™…•†8ûß¡‡1
+]	java:S125"<This block of commented-out lines of code should be removed.(ÓéŸæşÿÿÿÿ8ğ÷ô¢‡1
+O
+java:S1144"2Remove this unused private "setButtonFont" method.( —Ù÷8ø÷ô¢‡1

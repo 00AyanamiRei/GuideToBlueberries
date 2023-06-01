@@ -4,6 +4,9 @@ import com.ayanami.businesslogiclayer.model.BlueberryTaste;
 
 import java.util.List;
 
+/**
+ * BlueberryTaste DAO interface
+ */
 public interface BlueberryTasteDAO {
     void save(BlueberryTaste blueberryTaste);
     void update(BlueberryTaste blueberryTaste);

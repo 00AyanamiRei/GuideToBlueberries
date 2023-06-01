@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ayanami.presentationlayer.TableBlueberriesMenuController">
+    <TextField fx:id="searchTextField" promptText="Search..." />
+    <TableView fx:id="tableView" stylesheets="@../../../css/tableviewstyle.css">
+        <columns>
+            <TableColumn text="Name" fx:id="nameColumn" />
+            <TableColumn text="Size" fx:id="sizeColumn" />
+            <TableColumn text="Period" fx:id="periodColumn" />
+            <TableColumn text="Taste" fx:id="tasteColumn" />
+            <TableColumn text="Climate" fx:id="climateColumn" />
+            <TableColumn text="Landing Distance" fx:id="landingDistanceColumn" />
+            <TableColumn text="Pollination" fx:id="pollinationColumn" />
+            <TableColumn text="Description" fx:id="descriptionColumn" />
+            <TableColumn text="Photo" fx:id="photoColumn" />
+        </columns>
+    </TableView>
+</VBox>

@@ -8,6 +8,9 @@ import jakarta.validation.constraints.Size;
 
 import java.util.StringJoiner;
 
+/**
+ * SizeBlueberry entity
+ */
 public class SizeBlueberry implements SizeBlueberryI {
     @NotNull
     @Positive

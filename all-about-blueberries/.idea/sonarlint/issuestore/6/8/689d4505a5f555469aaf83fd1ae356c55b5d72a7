@@ -1,0 +1,15 @@
+
+h	java:S112¦"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8êã¹ ‡1
+X
+java:S1141–"5Extract this nested try block into a separate method.(ãÓûÿÿÿÿ8ìã¹ ‡1
+r
+java:S2095€"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(·Ç‚æøÿÿÿÿ8Çä¹ ‡1
+q
+java:S2095<"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(·Ç‚æøÿÿÿÿ8Çä¹ ‡1
+r
+java:S2095˜"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(·Ç‚æøÿÿÿÿ8Çä¹ ‡1
+s	java:S116!"WRename this field "ProfileImage" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş–«Ã8Êä¹ ‡1
+2
+java:S34573"Not enough arguments.(±œ®8Óä¹ ‡1
+O
+java:S1172l"2Remove this unused method parameter "actionEvent".(ßìï8áä¹ ‡1

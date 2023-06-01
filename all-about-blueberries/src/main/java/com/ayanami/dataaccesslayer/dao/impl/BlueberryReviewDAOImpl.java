@@ -7,6 +7,7 @@ import jakarta.validation.Valid;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,7 +23,20 @@ public class BlueberryReviewDAOImpl implements BlueberryReviewDAO {
     private static final String DELETE_QUERY = "DELETE FROM blueberry_reviews WHERE id = ?";
     private static final String FIND_BY_ID_QUERY = "SELECT * FROM blueberry_reviews WHERE id = ?";
     private static final String FIND_ALL_QUERY = "SELECT * FROM blueberry_reviews";
+    private final DataSource dataSource;
 
+    public BlueberryReviewDAOImpl() {
+        this.dataSource = ConnectionPool.getDataSource();
+    }
+    
+    public BlueberryReviewDAOImpl(DataSource dataSource) {
+        this.dataSource = ConnectionPool.getDataSource();
+    }
+
+    /**
+     * save review user
+     * @param review
+     */
     @Override
     public void save(@Valid BlueberryReview review) {
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -38,6 +52,10 @@ public class BlueberryReviewDAOImpl implements BlueberryReviewDAO {
         }
     }
 
+    /**
+     * update review user
+     * @param review
+     */
     @Override
     public void update(@Valid BlueberryReview review) {
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -54,6 +72,10 @@ public class BlueberryReviewDAOImpl implements BlueberryReviewDAO {
         }
     }
 
+    /**
+     * delete review user
+     * @param review
+     */
     @Override
     public void delete(@Valid BlueberryReview review) {
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -66,6 +88,11 @@ public class BlueberryReviewDAOImpl implements BlueberryReviewDAO {
         }
     }
 
+    /**
+     * find review by id
+     * @param id
+     * @return
+     */
     @Override
     public BlueberryReview findById(int id) {
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -84,6 +111,10 @@ public class BlueberryReviewDAOImpl implements BlueberryReviewDAO {
         return null;
     }
 
+    /**
+     * find all reviews
+     * @return
+     */
     @Override
     public List<BlueberryReview> findAll() {
         List<BlueberryReview> reviews = new ArrayList<>();
@@ -102,6 +133,12 @@ public class BlueberryReviewDAOImpl implements BlueberryReviewDAO {
         return reviews;
     }
 
+    /**
+     * map ResultSet to BlueberryReview
+     * @param resultSet
+     * @return
+     * @throws SQLException
+     */
     private BlueberryReview mapResultSetToReview(ResultSet resultSet) throws SQLException {
         int id = resultSet.getInt("id");
         int blueberryID = resultSet.getInt("blueberry_id");

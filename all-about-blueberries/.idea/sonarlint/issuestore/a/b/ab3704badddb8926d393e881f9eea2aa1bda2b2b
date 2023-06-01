@@ -1,0 +1,18 @@
+
+n
+java:S11923"YDefine a constant instead of duplicating this literal "ĞŸĞ¾Ğ¿ĞµÑ€ĞµĞ´Ğ¶ĞµĞ½Ğ½Ñ" 3 times.(¤Â“=
+Œ
+java:S11923"wDefine a constant instead of duplicating this literal "Ğ”Ñ–Ğ°Ğ»Ğ¾Ğ³Ğ¾Ğ²Ğµ Ğ²Ñ–ĞºĞ½Ğ¾ Ğ¿Ğ¾Ğ¿ĞµÑ€ĞµĞ´Ğ¶ĞµĞ½Ğ½Ñ" 3 times.(¤Â“=
+g	java:S117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“‰ŠÓ
+;
+java:S2629´"$Invoke method(s) only conditionally.(ºï¸Ñ
+@
+java:S2629¸"$Invoke method(s) only conditionally.(ÎşÖ”øÿÿÿÿ
+k
+java:S2095¨"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ƒ»ÊŞûÿÿÿÿ
+R
+java:S1854İ"6Remove this useless assignment to local variable "id".(°æêüÿÿÿÿ
+C
+java:S1481İ"'Remove this unused "id" local variable.(°æêüÿÿÿÿ
+r
+java:S1128"WRemove this unused import 'com.ayanami.dataaccesslayer.exceptions.UserExistsException'.(ÿ‰…Óøÿÿÿÿ

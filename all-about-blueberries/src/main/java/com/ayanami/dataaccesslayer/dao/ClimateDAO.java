@@ -4,6 +4,9 @@ import com.ayanami.businesslogiclayer.model.Climate;
 
 import java.util.List;
 
+/**
+ * Climate DAO interface
+ */
 public interface ClimateDAO {
     void save(Climate climate);
 

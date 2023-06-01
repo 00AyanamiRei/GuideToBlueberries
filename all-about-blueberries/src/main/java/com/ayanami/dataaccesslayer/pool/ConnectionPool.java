@@ -6,6 +6,9 @@ import com.zaxxer.hikari.HikariDataSource;
 
 import javax.sql.DataSource;
 
+/**
+ * create connection pool
+ */
 public class ConnectionPool {
     private static final DataSource dataSource;
 

@@ -1,0 +1,48 @@
+
+
+java:S11925"fDefine a constant instead of duplicating this literal "/com/ayanami/css/progressbarstyle.css" 4 times.(³­Ñ›øÿÿÿÿ
+b
+java:S2095|"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(«¹Î9
+c	java:S100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍöÈñ
+x
+java:S32522"]Use static access with "javafx.scene.control.ProgressIndicator" for "INDETERMINATE_PROGRESS".(Ââ‚ûÿÿÿÿ
+J
+java:S1611;"/Remove the parentheses around the "e" parameter(’‰Ú¬øÿÿÿÿ
+S	java:S106A"9Replace this use of System.out or System.err by a logger.(ı™øøÿÿÿÿ
+h	java:S100G"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«‘ç–ùÿÿÿÿ
+s
+java:S3252M"]Use static access with "javafx.scene.control.ProgressIndicator" for "INDETERMINATE_PROGRESS".(³æØñ
+J
+java:S1611T"/Remove the parentheses around the "e" parameter(”Ñ“Üøÿÿÿÿ
+N	java:S106Z"9Replace this use of System.out or System.err by a logger.(ö¬
+c	java:S100_"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÊ¬„
+H
+java:S1172_"2Remove this unused method parameter "actionEvent".(ÕÊ¬„
+x
+java:S3252e"]Use static access with "javafx.scene.control.ProgressIndicator" for "INDETERMINATE_PROGRESS".(Ââ‚ûÿÿÿÿ
+J
+java:S1611n"/Remove the parentheses around the "e" parameter(’‰Ú¬øÿÿÿÿ
+S	java:S106t"9Replace this use of System.out or System.err by a logger.(ı™øøÿÿÿÿ
+Y
+java:S1126‡"BReplace this if-then-else statement by a single method invocation.(®“ú‘
+d	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜€÷
+I
+java:S1172"2Remove this unused method parameter "actionEvent".(˜€÷
+y
+java:S3252–"]Use static access with "javafx.scene.control.ProgressIndicator" for "INDETERMINATE_PROGRESS".(Ââ‚ûÿÿÿÿ
+K
+java:S1611Ÿ"/Remove the parentheses around the "e" parameter(’‰Ú¬øÿÿÿÿ
+T	java:S106¥"9Replace this use of System.out or System.err by a logger.(ı™øøÿÿÿÿ
+d	java:S100ª"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›±Åã
+P
+java:S1172ª"2Remove this unused method parameter "actionEvent".(›±Åã8Ã¾·¢‡1
+f
+java:S1128"DRemove this unused import 'com.ayanami.dataaccesslayer.dao.UserDAO'.(ÿ’‡æÿÿÿÿÿ8ÖÜÁ¢‡1
+]
+java:S1128";Remove this unused import 'javafx.scene.layout.BorderPane'.(Îî¥üÿÿÿÿ8ÖÜÁ¢‡1
+W
+java:S1128"5Remove this unused import 'javafx.scene.layout.Pane'.(êÄƒÄşÿÿÿÿ8ÖÜÁ¢‡1
+Y
+java:S1128"7Remove this unused import 'javafx.scene.layout.Region'.(ñ³Áİıÿÿÿÿ8ÖÜÁ¢‡1
+k
+java:S1128"IRemove this unused import 'javax.swing.text.StyleConstants.setAlignment'.(™Ã„‚ûÿÿÿÿ8ÖÜÁ¢‡1

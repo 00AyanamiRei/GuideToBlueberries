@@ -7,6 +7,9 @@ import jakarta.validation.constraints.Size;
 
 import java.util.StringJoiner;
 
+/**
+ * Climate entity
+ */
 public class Climate implements ClimateI {
     @NotNull
     @Positive

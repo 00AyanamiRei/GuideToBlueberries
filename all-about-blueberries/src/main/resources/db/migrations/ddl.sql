@@ -40,7 +40,7 @@ DROP TABLE IF EXISTS `blueberry_review`;
 CREATE TABLE IF NOT EXISTS `blueberry_review`
     (
         `id` int(11) NOT NULL AUTO_INCREMENT,
-        `lochna_id` int(11) NOT NULL,
+        `blueberry_id` int(11) NOT NULL,
         `user_id` int(11) NOT NULL,
         `Review` varchar(255) NOT NULL,
         `Rating` int(11) NOT NULL,

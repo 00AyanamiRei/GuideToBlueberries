@@ -1,5 +1,8 @@
 package com.ayanami.businesslogiclayer.model.interfaces;
 
+/**
+ * Blueberry entity interface
+ */
 public interface BlueberryI {
     int getId();
     String getName();

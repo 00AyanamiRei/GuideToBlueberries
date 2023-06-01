@@ -4,6 +4,9 @@ import com.ayanami.businesslogiclayer.model.Blueberry;
 
 import java.util.List;
 
+/**
+ * Blueberry DAO interface
+ */
 public interface BlueberryDAO {
     void save(Blueberry blueberry);
     void update(Blueberry blueberry);

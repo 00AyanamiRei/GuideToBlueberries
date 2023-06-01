@@ -1,8 +1,11 @@
 package com.ayanami.businesslogiclayer.model.interfaces;
 
+/**
+ *  User entity interface
+ */
 public interface UserI {
-    int getId();
     String getUserName();
     String getPassword();
     String getMail();
+    String getStatus();
 }

@@ -5,6 +5,9 @@ import jakarta.validation.constraints.*;
 
 import java.util.StringJoiner;
 
+/**
+ * BlueberryReview entity
+ */
 public class BlueberryReview implements BlueberryReviewI {
     @NotNull
     private Integer id;
@@ -32,8 +35,15 @@ public class BlueberryReview implements BlueberryReviewI {
         this.rating = rating;
     }
 
-    public static BlueberryReviewBuilderId builder() {
-        return id -> blueberryID -> userID -> review -> rating -> () -> new BlueberryReview(id, blueberryID, userID, review, rating);
+    public BlueberryReview(int blueberryID, int userID, String review, int rating) {
+        this.blueberryID = blueberryID;
+        this.userID = userID;
+        this.review = review;
+        this.rating = rating;
+    }
+
+    public static BlueberryReviewBuilder builder() {
+        return new BlueberryReviewBuilder();
     }
 
     @Override
@@ -81,28 +91,41 @@ public class BlueberryReview implements BlueberryReviewI {
         this.rating = rating;
     }
 
-    public interface BlueberryReviewBuilderId {
-        BlueberryReviewBuilderBlueberryID id(int id);
-    }
+    public static class BlueberryReviewBuilder {
+        private Integer id;
+        private Integer blueberryID;
+        private Integer userID;
+        private String review;
+        private Integer rating;
 
-    public interface BlueberryReviewBuilderBlueberryID {
-        BlueberryReviewBuilderUserID blueberryID(int blueberry);
-    }
+        public BlueberryReviewBuilder id(int id) {
+            this.id = id;
+            return this;
+        }
 
-    private interface BlueberryReviewBuilderUserID  {
-        BlueberryReviewBuilderReview userID(int userID);
-    }
+        public BlueberryReviewBuilder blueberryID(int blueberryID) {
+            this.blueberryID = blueberryID;
+            return this;
+        }
 
-    public interface BlueberryReviewBuilderReview {
-        BlueberryReviewBuilderRating review(String review);
-    }
+        public BlueberryReviewBuilder userID(int userID) {
+            this.userID = userID;
+            return this;
+        }
 
-    public interface BlueberryReviewBuilderRating {
-        BlueberryReviewBuilder rating(int rating);
-    }
+        public BlueberryReviewBuilder review(String review) {
+            this.review = review;
+            return this;
+        }
 
-    public interface BlueberryReviewBuilder {
-        BlueberryReview build();
+        public BlueberryReviewBuilder rating(int rating) {
+            this.rating = rating;
+            return this;
+        }
+
+        public BlueberryReview build() {
+            return new BlueberryReview(id, blueberryID, userID, review, rating);
+        }
     }
 
     @Override

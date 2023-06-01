@@ -1,0 +1,39 @@
+
+l
+java:S1192E"QDefine a constant instead of duplicating this literal "ĞŸĞ¾Ğ¼Ğ¸Ğ»ĞºĞ°!" 12 times.(çÈ­—ûÿÿÿÿ
+“
+java:S1192E"xDefine a constant instead of duplicating this literal "Ğ”Ñ–Ğ°Ğ»Ğ¾Ğ³Ğ¾Ğ²Ğµ Ğ²Ñ–ĞºĞ½Ğ¾ Ğ¿Ğ¾Ğ¿ĞµÑ€ĞµĞ´Ğ¶ĞµĞ½Ğ½Ñ" 12 times.(çÈ­—ûÿÿÿÿ
+@
+java:S2629Ô"$Invoke method(s) only conditionally.(šá‹Şøÿÿÿÿ
+;
+java:S2629ı"$Invoke method(s) only conditionally.(â÷¤œ
+;
+java:S2629€"$Invoke method(s) only conditionally.(Ñˆ–†
+@
+java:S2629ç"$Invoke method(s) only conditionally.(ØÕÊ±ùÿÿÿÿ
+n	java:S116"TRename this field "ChooseBox" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÈšÎşÿÿÿÿ
+N
+java:S3416$"3Update this logger to use "AdminMenuService.class".(Ê•¯«ıÿÿÿÿ
+Q	java:S125)"<This block of commented-out lines of code should be removed.(…¥é®
+h
+java:S6204Ç"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(¸ ãq
+}
+java:S3457Ô"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(šá‹Şøÿÿÿÿ
+d
+java:S1858Ô"H"query" is already a string, there's no need to call "toString()" on it.(šá‹Şøÿÿÿÿ
+x
+java:S3457ı"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(â÷¤œ
+e
+java:S1858ı"N"deleteQuery" is already a string, there's no need to call "toString()" on it.(â÷¤œ
+x
+java:S3457€"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(Ñˆ–†
+e
+java:S1858€"N"deleteQuery" is already a string, there's no need to call "toString()" on it.(Ñˆ–†
+}
+java:S3457ç"aNo need to call "toString()" method as formatting and string conversion is done by the Formatter.(ØÕÊ±ùÿÿÿÿ
+f
+java:S1128"KRemove this unused import 'com.ayanami.businesslogiclayer.model.Blueberry'.(†áùÑşÿÿÿÿ
+H
+java:S1128	"3Remove this unused import 'javafx.concurrent.Task'.(Úåôg
+K
+java:S1144d"5Remove this unused private "showErrorMessage" method.(–îàº

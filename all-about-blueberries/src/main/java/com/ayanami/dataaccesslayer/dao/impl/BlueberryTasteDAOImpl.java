@@ -26,6 +26,14 @@ public class BlueberryTasteDAOImpl implements BlueberryTasteDAO {
         this.dataSource = ConnectionPool.getDataSource();
     }
 
+    public BlueberryTasteDAOImpl(DataSource dataSource) {
+        this.dataSource = ConnectionPool.getDataSource();
+    }
+
+    /**
+     * save blueberry taste
+     * @param blueberryTaste
+     */
     @Override
     public void save(@Valid BlueberryTaste blueberryTaste) {
         try (Connection connection = dataSource.getConnection();
@@ -39,6 +47,10 @@ public class BlueberryTasteDAOImpl implements BlueberryTasteDAO {
         }
     }
 
+    /**
+     * update blueberry taste
+     * @param blueberryTaste
+     */
     @Override
     public void update(@Valid BlueberryTaste blueberryTaste) {
         try (Connection connection = dataSource.getConnection();
@@ -52,6 +64,10 @@ public class BlueberryTasteDAOImpl implements BlueberryTasteDAO {
         }
     }
 
+    /**
+     * delete blueberry taste
+     * @param blueberryTaste
+     */
     @Override
     public void delete(@Valid BlueberryTaste blueberryTaste) {
         try (Connection connection = dataSource.getConnection();
@@ -64,6 +80,11 @@ public class BlueberryTasteDAOImpl implements BlueberryTasteDAO {
         }
     }
 
+    /**
+     * find blueberry taste by id
+     * @param id
+     * @return
+     */
     @Override
     public BlueberryTaste findById(int id) {
         BlueberryTaste blueberryTaste = null;
@@ -85,6 +106,10 @@ public class BlueberryTasteDAOImpl implements BlueberryTasteDAO {
         return blueberryTaste;
     }
 
+    /**
+     * find all blueberry tastes
+     * @return
+     */
     @Override
     public List<BlueberryTaste> findAll() {
         List<BlueberryTaste> blueberryTastes = new ArrayList<>();

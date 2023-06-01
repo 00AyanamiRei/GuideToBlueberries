@@ -28,6 +28,14 @@ public class SizeBlueberryDAOImpl implements SizeBlueberryDAO
         this.dataSource = ConnectionPool.getDataSource();
     }
 
+    public SizeBlueberryDAOImpl(DataSource dataSource) {
+        this.dataSource = ConnectionPool.getDataSource();
+    }
+
+    /**
+     * save a new SizeBlueberry
+     * @param sizeBlueberry
+     */
     @Override
     public void save(@Valid SizeBlueberry sizeBlueberry) {
         try (Connection connection = dataSource.getConnection();
@@ -43,6 +51,10 @@ public class SizeBlueberryDAOImpl implements SizeBlueberryDAO
         }
     }
 
+    /**
+     * update a SizeBlueberry
+     * @param sizeBlueberry
+     */
     @Override
     public void update(@Valid SizeBlueberry sizeBlueberry) {
         try (Connection connection = dataSource.getConnection();
@@ -58,6 +70,10 @@ public class SizeBlueberryDAOImpl implements SizeBlueberryDAO
         }
     }
 
+    /**
+     * delete a SizeBlueberry
+     * @param sizeBlueberry
+     */
     @Override
     public void delete(@Valid SizeBlueberry sizeBlueberry) {
         try (Connection connection = dataSource.getConnection();
@@ -72,6 +88,11 @@ public class SizeBlueberryDAOImpl implements SizeBlueberryDAO
         }
     }
 
+    /**
+     * find a SizeBlueberry by id
+     * @param id
+     * @return
+     */
     @Override
     public SizeBlueberry findById(int id) {
         SizeBlueberry sizeBlueberry = null;
@@ -94,6 +115,10 @@ public class SizeBlueberryDAOImpl implements SizeBlueberryDAO
         return sizeBlueberry;
     }
 
+    /**
+     * find all SizeBlueberries
+     * @return
+     */
     @Override
     public List<SizeBlueberry> findAll() {
         List<SizeBlueberry> sizeBlueberries = new ArrayList<>();

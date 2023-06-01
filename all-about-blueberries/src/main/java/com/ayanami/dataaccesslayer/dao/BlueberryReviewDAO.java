@@ -4,6 +4,9 @@ import com.ayanami.businesslogiclayer.model.BlueberryReview;
 
 import java.util.List;
 
+/**
+ * BlueberryReview DAO interface
+ */
 public interface BlueberryReviewDAO {
     void save(BlueberryReview review);
 

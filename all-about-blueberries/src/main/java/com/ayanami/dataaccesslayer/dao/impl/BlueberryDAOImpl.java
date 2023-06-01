@@ -7,13 +7,28 @@ import jakarta.validation.Valid;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class BlueberryDAOImpl implements BlueberryDAO {
     private static final Logger LOGGER = LogManager.getLogger(BlueberryDAOImpl.class);
+    private final DataSource dataSource;
 
+    public BlueberryDAOImpl() {
+        this.dataSource = ConnectionPool.getDataSource();
+    }
+
+    public BlueberryDAOImpl(DataSource dataSource) {
+        this.dataSource = ConnectionPool.getDataSource();
+    }
+
+
+    /**
+     * save blueberry data
+     * @param blueberry
+     */
     @Override
     public void save(@Valid Blueberry blueberry) {
         String query = "INSERT INTO blueberry (id, name, size_blueberry_id, period_id, taste_id, climate_id, landing_distance, pollination, description, photo) " +
@@ -37,6 +52,10 @@ public class BlueberryDAOImpl implements BlueberryDAO {
         }
     }
 
+    /**
+     * update blueberry data
+     * @param blueberry
+     */
     @Override
     public void update(@Valid Blueberry blueberry) {
         String query = "UPDATE blueberry SET name = ?, size_blueberry_id = ?, period_id = ?, taste_id = ?, " +
@@ -60,6 +79,10 @@ public class BlueberryDAOImpl implements BlueberryDAO {
         }
     }
 
+    /**
+     * delete blueberry data
+     * @param blueberry
+     */
     @Override
     public void delete(@Valid Blueberry blueberry) {
         String query = "DELETE FROM blueberry WHERE id = ?";
@@ -73,6 +96,11 @@ public class BlueberryDAOImpl implements BlueberryDAO {
         }
     }
 
+    /**
+     * find user data by id
+     * @param id
+     * @return blueberry
+     */
     @Override
     public Blueberry findById(int id) {
         Blueberry blueberry = null;
@@ -91,6 +119,10 @@ public class BlueberryDAOImpl implements BlueberryDAO {
         return blueberry;
     }
 
+    /**
+     * find all blueberry data
+     * @return blueberry
+     */
     @Override
     public List<Blueberry> findAll() {
         List<Blueberry> blueberries = new ArrayList<>();
@@ -109,6 +141,12 @@ public class BlueberryDAOImpl implements BlueberryDAO {
         return blueberries;
     }
 
+    /**
+     * extract blueberry data from result set
+     * @param resultSet
+     * @return blueberry
+     * @throws SQLException
+     **/
     private Blueberry extractBlueberryFromResultSet(ResultSet resultSet) throws SQLException {
         int id = resultSet.getInt("id");
         String name = resultSet.getString("name");

@@ -1,0 +1,5 @@
+
+c
+java:S2095K"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(ÆíĞË
+r	java:S116"XRename this field "UserNameField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È–¥úÿÿÿÿ
+m	java:S116"XRename this field "PasswordField" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€«³è

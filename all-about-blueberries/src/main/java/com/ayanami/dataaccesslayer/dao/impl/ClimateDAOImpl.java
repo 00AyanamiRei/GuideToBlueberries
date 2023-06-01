@@ -7,6 +7,7 @@ import jakarta.validation.Valid;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +15,20 @@ import java.util.List;
 public class ClimateDAOImpl implements ClimateDAO {
     private static final Logger LOGGER = LogManager.getLogger(ClimateDAOImpl.class);
 
+    private final DataSource dataSource;
+
+    public ClimateDAOImpl() {
+        this.dataSource = ConnectionPool.getDataSource();
+    }
+
+    public ClimateDAOImpl(DataSource dataSource) {
+        this.dataSource = ConnectionPool.getDataSource();
+    }
+
+    /**
+     * save climate
+     * @param climate
+     */
     @Override
     public void save(@Valid Climate climate) {
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -30,6 +45,10 @@ public class ClimateDAOImpl implements ClimateDAO {
         }
     }
 
+    /**
+     * update climate
+     * @return
+     */
     @Override
     public void update(@Valid Climate climate) {
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -46,6 +65,10 @@ public class ClimateDAOImpl implements ClimateDAO {
         }
     }
 
+    /**
+     * delete climate
+     * @param climate
+     */
     @Override
     public void delete(@Valid Climate climate) {
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -61,6 +84,10 @@ public class ClimateDAOImpl implements ClimateDAO {
         }
     }
 
+    /**
+     * find climate by id
+     * @return
+     */
     @Override
     public Climate findById(int id) {
         try (Connection connection = ConnectionPool.getDataSource().getConnection();
@@ -84,6 +111,10 @@ public class ClimateDAOImpl implements ClimateDAO {
         return null;
     }
 
+    /**
+     * find all climates
+     * @return
+     */
     @Override
     public List<Climate> findAll() {
         List<Climate> climates = new ArrayList<>();
@@ -105,6 +136,12 @@ public class ClimateDAOImpl implements ClimateDAO {
         return climates;
     }
 
+    /**
+     * create climate from result set
+     * @param resultSet
+     * @return
+     * @throws SQLException
+     */
     private Climate createClimateFromResultSet(ResultSet resultSet) throws SQLException {
         int id = resultSet.getInt("id");
         String climate = resultSet.getString("climate");
